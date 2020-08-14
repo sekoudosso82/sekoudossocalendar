@@ -25,7 +25,7 @@ class TasksController < ApplicationController
     def create
         task = Task.create(task_params)
     
-        render json: item
+        render json: task
     end
       
     def update
@@ -47,6 +47,6 @@ class TasksController < ApplicationController
       private
     
     def task_params
-        params.require(:task).permit(:user_id, :title, :dateToDo, :status)
+        params.require(:task).permit(:user_id, :title, :status, :dateToDo)
     end
 end

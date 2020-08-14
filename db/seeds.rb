@@ -20,6 +20,4 @@ Task.create(user_id: 1,
     title: "test 1", 
     dateToDo: "2020/05/27")
 
-Task.create(user_id: 1, 
-    title: "test 2", 
-    dateToDo: "2020/05/27")
+Task.create(user_id: 1, title: "test 2", dateToDo: "2020/05/27")
