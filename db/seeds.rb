@@ -9,8 +9,6 @@ User.create(username: "Sekou", password: "Sekou", email: "test@example.com", pho
 User.create(username: "Ben", password: "Ben", email: "test@example.com", phone:123)
 User.create(username: "Jack", password: "Jack", email: "test@example.com", phone:123)
 
-Task.create(user_id: 1, 
-    title: "test 1", 
-    dateToDo: "2020/05/27")
 
+Task.create(user_id: 1, title: "test 1", dateToDo: "2020/05/27")
 Task.create(user_id: 1, title: "test 2", dateToDo: "2020/05/27")
