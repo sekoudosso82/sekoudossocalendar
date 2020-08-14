@@ -4,7 +4,6 @@ class UsersController < ApplicationController
         # users = User.all.sort_by { |user| user.username } 
         users = User.all 
         render json: users, except: [:updated_at, :created_at]
-
     end 
 
     def create
@@ -13,19 +12,18 @@ class UsersController < ApplicationController
             password: params[:password]
           )
       
-          if user.save
+        if user.save
             token = encode_token(user.id)
             render json: {user: user, token: token}
           else
             render json: {errors: user.errors.full_messages}
-          end
+        end
         
     end
 
     def update
         user = User.find(params[:id])
         user.update(user_params)
-
         render json: user, expect: [:updated_at, :created_at] 
     end
 
